@@ -14,7 +14,7 @@ export class AccordionComponent implements OnInit {
 
   constructor(private http: Http) { }
 
-  beerList:beer[];
+  beerList: beer[];
 
   ngOnInit() {
     this.http.get("https://api.punkapi.com/v2/beers").pipe(map((response) => response.json()))
@@ -28,4 +28,15 @@ export class AccordionComponent implements OnInit {
     console.log('ssssssssssss', res, $(this));
   }
 
+  closeAll = function () {
+    this.beerList.map(response => {
+      response.show = false;
+    });
+  }
+
+  ExpandAll = function () {
+    this.beerList.map(response => {
+      response.show = true;
+    });
+  }
 }

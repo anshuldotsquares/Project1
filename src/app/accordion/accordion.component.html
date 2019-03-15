@@ -1,9 +1,13 @@
 <div class="cst-main">
+  <div>
+    <button (click)="closeAll()"> Close All</button>
+    <button (click)="ExpandAll()"> Expand All</button>
+  </div>
   <div class="acrd" *ngFor="let beer of beerList;index as i">
     <div class="acrd-header" [ngClass]="{'acrd-header-open': beer.show}" (click)="hasClicked(i)">
       {{beer.name}}
       <span>
-        <a >
+        <a>
           <i *ngIf="!beer.show" class="fa fa-angle-right"></i>
           <i *ngIf="beer.show" class="fa fa-angle-down"></i>
         </a>
