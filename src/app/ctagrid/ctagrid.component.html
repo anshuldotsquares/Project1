@@ -1,6 +1,6 @@
 <div class="cst-main">
-  <input type="radio" [(ngModel)]="abv_lt" value="true" name="rdbabv" />Less than
-  <input type="radio" [(ngModel)]="abv_lt" value="false" name="rdbabv" selected />Greater than
+  <input type="radio" [(ngModel)]="abv_lt" [value]="true" name="rdbabv" />Less than
+  <input type="radio" [(ngModel)]="abv_lt" [value]="false" name="rdbabv" selected />Greater than
   <input type="number" [(ngModel)]="abv" placeholder="Search abv" />
   <button (click)="search()">Search</button>
 </div>
