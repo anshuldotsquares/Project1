@@ -1,3 +1,32 @@
-<p>
-  ctagrid works!
-</p>
+<div class="cst-main">
+  <input type="radio" [(ngModel)]="abv_lt" value="true" name="rdbabv" />Less than
+  <input type="radio" [(ngModel)]="abv_lt" value="false" name="rdbabv" selected />Greater than
+  <input type="number" [(ngModel)]="abv" placeholder="Search abv" />
+  <button (click)="search()">Search</button>
+</div>
+<div class="grid25" *ngFor="let beer of beerList;index as i">
+  <div class="grid-header">{{beer.name}}</div>
+  <div class="grid-content">
+    <div>
+      <strong>Tagline: </strong>
+      {{beer.tagline}}
+    </div>
+    <div>
+      <strong>First Brewed: </strong>
+      {{beer.first_brewed}}
+    </div>
+    <div class="div50">
+      <strong>abv: </strong>
+      {{beer.abv}}
+    </div>
+    <div class="div50">
+      <strong>Volume: </strong>
+      {{beer.volume.value +' '+beer.volume.unit}}
+    </div>
+    <div class="div100">
+      <strong>Description: </strong>
+      {{beer.description | slice:0:150}}
+    </div>
+  </div>
+
+</div>

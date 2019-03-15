@@ -9,6 +9,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { AccordionComponent } from './accordion/accordion.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { CTAGridComponent } from './ctagrid/ctagrid.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { CTAGridComponent } from './ctagrid/ctagrid.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpModule
+    HttpModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
