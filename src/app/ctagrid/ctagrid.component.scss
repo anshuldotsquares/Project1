@@ -28,9 +28,49 @@ b {
   font-weight: bold;
 }
 
-.paging-div{
-    padding: 26px;
-    width: 96%;
-    text-align: right;
-    margin: 2%;
+.paging-div {
+  padding: 26px;
+  width: 96%;
+  text-align: right;
+  margin: 2%;
+}
+@media screen and (max-width: 1200px) {
+  .grid25 {
+    width: 28%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .grid25 {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .grid25 {
+    width: 42%;
+  }
+  .grid25 {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .grid25 {
+    line-height: 19px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .grid25 {
+    width: 86%;
+    height: 200px;
+
+  }
+}
+
+@media screen and (max-width: 240px) {
+  .grid25 {
+    line-height: 19px;
+    height: 200px;
+  }
 }
