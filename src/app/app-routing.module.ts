@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { BeersListComponent } from './beers-list/beers-list.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AccordionComponent } from './accordion/accordion.component';
 import { CarouselComponent } from './carousel/carousel.component';
@@ -19,7 +18,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'beers',
+    redirectTo: 'accordion',
     pathMatch: 'full'
   },
 {
