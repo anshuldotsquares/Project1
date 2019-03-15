@@ -28,7 +28,8 @@ export class CTAGridComponent implements OnInit {
     if (!this.abv) {
       this.abv = 0;
     }
-
+    this.page = 1;
+    this.perPageNumber = 8;
     if (!this.abv_lt) {
       this.filter = "&abv_gt=" + this.abv;
     } else {
@@ -40,27 +41,29 @@ export class CTAGridComponent implements OnInit {
   }
 
   getBeersList = function () {
-    if (this.page > 0 && !this.nextButtonDisable) {
+    if (this.page > 0) {
       var url = this.baseUrl + "?page=" + this.page + "&per_page=" + this.perPageNumber + this.filter;
 
       this.http.get(url).pipe(map((response) => response.json()))
         .subscribe((data) => {
           console.log(data);
           this.beerList = data;
-          if (this.beerList.length < this.perPageNumber) {
-            this.nextButtonDisable = true;
-          }
+
         });
     }
   }
 
   nextList = function () {
-    this.page += 1;
+    if (this.beerList.length == this.perPageNumber) {
+      this.page += 1;
+    }
     this.getBeersList();
   }
 
   prevList = function () {
-    this.page -= 1;
+    if (this.page > 1) {
+      this.page -= 1;
+    }
     this.nextButtonDisable = false;
     this.getBeersList();
   }

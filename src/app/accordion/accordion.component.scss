@@ -5,6 +5,7 @@
   margin: 2%;
 }
 .acrd {
+  margin-top: 4px;
   &:nth-child(odd) {
     .acrd-header {
       padding: 7px;
@@ -73,4 +74,17 @@ b {
 .acrd-header-open {
   background-color: black !important;
   color: white;
+}
+
+button{
+  background-color: white;
+    border: 1px solid;
+    margin-right: 5px;
+}
+
+button:active{
+  background-color: black;
+    border: 2px solid;
+    margin-right: 5px;
+    color: white;
 }

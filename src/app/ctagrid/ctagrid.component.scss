@@ -74,3 +74,17 @@ b {
     height: 200px;
   }
 }
+
+button{
+  background-color: white;
+    border: 1px solid;
+    margin-right: 5px;
+}
+
+button:active{
+  background-color: black;
+    border: 1px solid;
+    margin-right: 5px;
+    margin-top: 5px;
+    color: white;
+}
