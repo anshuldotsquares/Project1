@@ -1,0 +1,76 @@
+.cst-main {
+  padding: 26px;
+  background: white;
+  width: 96%;
+  margin: 2%;
+}
+.acrd {
+  &:nth-child(odd) {
+    .acrd-header {
+      padding: 7px;
+      background-color: #f0eef2;
+      font-weight: 600;
+      font-size: 13px;
+      cursor: pointer;
+      span {
+        float: right;
+        margin-right: 5px;
+        a {
+          font-size: x-large;
+        }
+      }
+    }
+    .acrd-content {
+      border: 2px solid #f0eef2;
+    }
+  }
+  &:nth-child(even) {
+    .acrd-header {
+      padding: 7px;
+      font-weight: 600;
+      font-size: 13px;
+      cursor: pointer;
+      span {
+        float: right;
+        margin-right: 5px;
+        a {
+          font-size: x-large;
+        }
+      }
+    }
+  }
+
+  .acrd-content {
+    padding: 5px;
+    text-align: justify;
+    font-size: small;
+  }
+}
+
+// .acrd:nth-child(even) {
+
+//   .acrd-content {
+//     padding: 5px;
+//     text-align: justify;
+//     font-size: small;
+//   }
+// }
+
+.div50 {
+  width: 50%;
+  padding: 9px;
+  float: left;
+}
+.div100 {
+  width: 100%;
+  padding: 9px;
+}
+strong,
+b {
+  font-weight: bold;
+}
+
+.acrd-header-open {
+  background-color: black !important;
+  color: white;
+}

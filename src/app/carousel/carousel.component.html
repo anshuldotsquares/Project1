@@ -1,0 +1,27 @@
+<div class="cst-main">
+  <div>
+    <button class="prev">
+      <<Prev </button> <button class="next"> Next>>
+    </button>
+  </div>
+  <div class="cycle-slideshow" id="slider1" data-cycle-fx="tileBlind" data-cycle-prev=".prev" data-cycle-next=".next"
+    data-cycle-pause-on-hover="true">
+
+    <img src="assets/img/img1.jpg">
+    <img src="assets/img/img2.jpg">
+    <img src="assets/img/img3.jpg">
+    <img src="assets/img/img4.jpg">
+  </div>
+  <button data-cycle-cmd="pause" data-cycle-context="#slider1">Pause</button>
+  <button data-cycle-cmd="resume" data-cycle-context="#slider1">Resume</button>
+</div>
+<div class="cst-main">
+  <div class="cycle-slideshow"
+  data-cycle-fx="scrollVert" data-cycle-timeout="2000" data-cycle-pager="#pager3">
+    <img src="assets/img/img1.jpg">
+    <img src="assets/img/img2.jpg">
+    <img src="assets/img/img3.jpg">
+    <img src="assets/img/img4.jpg">
+  </div>
+  <div id="pager3"></div>
+</div>

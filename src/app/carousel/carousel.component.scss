@@ -1,0 +1,19 @@
+.cst-main {
+  padding: 26px;
+  background: white;
+  width: 96%;
+  margin: 2%;
+}
+img {
+  width: 993px;
+  height: 255px;
+}
+
+#pager3 {
+  font-size: 25px;
+  text-align: center;
+  cursor: pointer;
+  .cycle-pager-active {
+    color: white !important;
+  }
+}

@@ -1,0 +1,85 @@
+<div class="cst-main">
+  <div class="acrd" *ngFor="let beer of beerList;index as i">
+    <div class="acrd-header" [ngClass]="{'acrd-header-open': beer.show}" (click)="hasClicked(i)">
+      {{beer.name}}
+      <span>
+        <a >
+          <i *ngIf="!beer.show" class="fa fa-angle-right"></i>
+          <i *ngIf="beer.show" class="fa fa-angle-down"></i>
+        </a>
+      </span>
+    </div>
+    <div class="acrd-content" *ngIf="beer.show">
+      <div class="div50">
+        <strong>Tagline: </strong>
+        {{beer.tagline}}
+      </div>
+      <div class="div50">
+        <strong>First Brewed: </strong>
+        {{beer.first_brewed}}
+      </div>
+      <div class="div50">
+        <strong>abv: </strong>
+        {{beer.abv}}
+      </div>
+      <div class="div50">
+        <strong>ibu: </strong>
+        {{beer.ibu}}
+      </div>
+      <div class="div50">
+        <strong>Attenuation Level: </strong>
+        {{beer.attenuation_level}}
+      </div>
+      <div class="div50">
+        <strong>Volume: </strong>
+        {{beer.volume.value +' '+beer.volume.unit}}
+      </div>
+      <div class="div50">
+        <strong>Boil Volume: </strong>
+        {{beer.boil_volume.value +' '+beer.boil_volume.unit}}
+      </div>
+
+      <div class="div50">
+        <strong>Contributed By: </strong>
+        {{beer.contributed_by}}
+      </div>
+      <div class="div100">
+        <strong>Ingredients:- </strong>
+        <p>
+          <strong> Malt: </strong>
+          <span *ngFor="let malt of beer.ingredients.malt">
+            {{malt.name+' '+malt.amount.value+' '+malt.amount.unit}},
+          </span>
+        </p>
+        <p>
+          <strong> Hops: </strong>
+          <span *ngFor="let hop of beer.ingredients.hops">
+            {{hop.name+' '+hop.amount.value+' '+hop.amount.unit}},
+          </span>
+        </p>
+        <p>
+          <strong> Yeast: </strong>
+          <span>
+            {{beer.ingredients.yeast}},
+          </span>
+        </p>
+      </div>
+      <div class="div100">
+        <strong>Food Pairing: </strong>
+        <span *ngFor="let food_pair of beer.food_pairing">
+          {{food_pair}},
+        </span>
+
+      </div>
+      <div class="div100">
+        <strong>Brewers Tips: </strong>
+        {{beer.brewers_tips}}
+      </div>
+      <div class="div100">
+        <strong>Description: </strong>
+        {{beer.description}}
+
+      </div>
+    </div>
+  </div>
+</div>
