@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
 import { map } from 'rxjs/operators';
 import { beer } from './ctagrid.model';
-import { timingSafeEqual } from 'crypto';
 
 @Component({
   selector: 'app-ctagrid',
